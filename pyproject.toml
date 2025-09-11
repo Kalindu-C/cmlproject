@@ -1,0 +1,13 @@
+[project]
+name = "my-work"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dotenv>=0.9.9",
+    "groq>=0.31.1",
+    "numpy>=2.3.2",
+    "pandas>=2.3.2",
+    "pydantic>=2.11.7",
+]
