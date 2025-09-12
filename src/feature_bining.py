@@ -21,7 +21,7 @@ class CustomBiningStrategy(FeatureBiningStrategy):
                 return "Excellent"
             
             for bin_label, bin_range in self.bin_definition.items():
-                if(bin_range) == 2:
+                if len(bin_range) == 2:
                     if bin_range[0] <= value <= bin_range[1]:
                         return bin_label
                 elif len(bin_range) == 1:

@@ -26,6 +26,7 @@ class DropMissingValueStrategy(MissingValueHandlingStrategy):
         df_cleaned = df.dropna(subset=self.critical_columns)
         n_droped = len(df) - len(df_cleaned)
         logging.info(f"{n_droped} has been dropped")
+        return df_cleaned
 
 
 class Gender(str, Enum):
@@ -62,8 +63,8 @@ class GenderImputer:
     def impute(self, df):
         missing_gender_index = df['Gender'].isnull()
         for idx in df[missing_gender_index].index:
-            first_name = df.loc[idx, 'first_name']
-            last_name = df.loc[idx, 'last_name']
+            first_name = df.loc[idx, 'Firstname']
+            last_name = df.loc[idx, 'Lastname']
             gender = self._predict_gender(first_name,last_name)
 
             if gender:

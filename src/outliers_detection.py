@@ -13,10 +13,11 @@ class IQROutliersDetection(OutlierDetectionStrategy):
     def detect_outliers(self, df: pd.DataFrame, columns: list) -> pd.DataFrame:
         outliers = pd.DataFrame(False, index=df.index, columns=columns)
         for col in columns:
+            df[col] = df[col].astype(float)
             Q1 = df[col].quantile(0.25)
             Q3 = df[col].quantile(0.75)
             IQR = Q3-Q1
-            outliers = (df[col] < Q1 - 1.5*IQR | df[col] > Q3 + 1.5*IQR)
+            outliers[col] = (df[col] < Q1 - 1.5*IQR) | (df[col] > Q3 + 1.5*IQR)
         logging.info("Outliers detected using IQR method")
         return outliers
     

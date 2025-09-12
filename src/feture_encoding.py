@@ -26,7 +26,7 @@ class NorminalEncodingStrategy(FeatureEncodingStratergy):
     def __init__(self, norminal_columns):
         self.norminal_columns = norminal_columns
         self.encoder_dicts = {}
-        os.mkdir('artifacts/encode', exist_ok=True)
+        os.makedirs('artifacts/encode', exist_ok=True)
 
     def encode(self, df):
         for column in self.norminal_columns:
@@ -36,7 +36,7 @@ class NorminalEncodingStrategy(FeatureEncodingStratergy):
 
             encoder_path = os.path.join('artifacts/encode', f"{column}_encoder.json")
             with open(encoder_path, "w") as f:
-                json.dump(encoder_dict)
+                json.dump(encoder_dict, f)
 
             df[column] = df[column].map(encoder_dict)
         return df
@@ -54,3 +54,4 @@ class OrdinalENcodingStrategy(FeatureEncodingStratergy):
         for column, mapping in self.ordinal_mapping.items():
             df[column] = df[column].map(mapping)
             logging.info(f"Encoded ordinal variable '{column} with {len(mapping)} categories")
+        return df
