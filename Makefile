@@ -2,7 +2,7 @@
 
 # Default Python interpreter
 PYTHON = python
-VENV = .venv/bin/activate
+VENV = .venv/Scripts/activate
 MLFLOW_PORT ?= 5001
 
 # Default target

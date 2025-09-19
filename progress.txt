@@ -1,0 +1,3 @@
+2025/09/15 - 
+* created makefile and get basic insight about it 
+* learn how to remove mistakenly added file/folders from github (publish meadium article) - 5.00 mins
