@@ -24,10 +24,10 @@ install:
 	@echo "Creating virtual environment..."
 	@python3 -m venv .venv
 	@echo "Activating virtual environment and installing dependencies..."
-	@source .venv/bin/activate && pip install --upgrade pip
-	@source .venv/bin/activate && pip install -r requirements.txt
+	@source .venv/Scripts/activate && pip install --upgrade pip
+	@source .venv/Scripts/activate && pip install -r requirements.txt
 	@echo "Installation completed successfully!"
-	@echo "To activate the virtual environment, run: source .venv/bin/activate"
+	@echo "To activate the virtual environment, run: source .venv/Scripts/activate"
 
 # Clean up
 clean:
