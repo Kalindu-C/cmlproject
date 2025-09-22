@@ -1,0 +1,11 @@
+artifact_location: file:///D:/MyProjects/Production-Ready Machine Learning Systems/Week
+  05/my_work/mlruns/318563819470040890/models/m-a32aa5c7798a4e658fa2b11dfc09cfb0/artifacts
+creation_timestamp: 1758565022625
+experiment_id: '318563819470040890'
+last_updated_timestamp: 1758565039764
+model_id: m-a32aa5c7798a4e658fa2b11dfc09cfb0
+model_type: null
+name: model
+source_run_id: 801fcd05b4524d649fcdb384f7b1db4e
+status: 2
+status_message: null

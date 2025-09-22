@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/MyProjects/Production-Ready Machine Learning Systems/Week
+  05/my_work/mlruns/318563819470040890/801fcd05b4524d649fcdb384f7b1db4e/artifacts
+end_time: 1758565040341
+entry_point_name: ''
+experiment_id: '318563819470040890'
+lifecycle_stage: active
+run_id: 801fcd05b4524d649fcdb384f7b1db4e
+run_name: training pipeline | 2025-09-22 23:46:59
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758565021323
+status: 3
+tags: []
+user_id: Dell
